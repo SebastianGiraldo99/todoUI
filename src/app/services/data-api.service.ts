@@ -2,13 +2,16 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { ITodoModel } from '../models/ITodo.model';
+import { environment } from '../../environments/environment';
+console.log(environment);
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataApiService {
 
-  private baseURl: string = 'https://localhost:7165/api/';
+  private baseURl: string = environment.apiUrl;
+  // private baseURl: string = 'http://api-todorecords.somee.com/api/';
 
   private readonly _http = inject(HttpClient);
 
