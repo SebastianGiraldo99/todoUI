@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 })
 export class DataApiService {
 
-  private baseURl: string = 'http://api-todorecords.somee.com/api/';
+  private baseURl: string = 'https://todorecordsapi.onrender.com/api/';
 
   private readonly _http = inject(HttpClient);
 
