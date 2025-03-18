@@ -61,7 +61,6 @@ export class TodoListComponent implements OnInit {
         confirmButtonText: 'Confirmar',
         cancelButtonText : 'Cancelar'
       }).then((result)=>{
-        debugger;
         if(result.isConfirmed){
           this._dataApi.deleteTask(idTodo).subscribe((response)=>{
             if(response){
